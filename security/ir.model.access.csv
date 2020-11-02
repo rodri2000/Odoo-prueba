@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pupil_task_access,Pupil Task,model_retofinal_activity,retofinal.group_pupil,1,1,1,1
+tutor_task_access,Tutor Task,model_retofinal_activity,retofinal.group_tutor,1,0,0,0

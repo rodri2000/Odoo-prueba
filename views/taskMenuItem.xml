@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This window is to show the list of pupils
+-->
+
+
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="task_form_view">
+            <field name="name">taskForm</field>
+            <field name="model">retofinal.activity</field>
+            <field name="arch" type="xml">
+                <form string="Activity Form">
+                    <group>
+                        <field name="description"/>
+                        <field name="res_pupil"/>
+                        <field name="duration"/>
+                        <field name="remarks"/>
+                        <field name="date"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="activity_list">
+            <field name="name">Activity List</field>
+            <field name="model">retofinal.activity</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="res_pupil"/>
+                    <field name="description"/>
+                    <field name="date"/>
+                    <field name="duration"/>
+                </tree>
+            </field>        
+        </record>
+        <record model="ir.ui.view" id="activity_search">
+            <field name="name">Activity Search</field>
+            <field name="model">retofinal.activity</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="res_pupil"/>
+                </search>
+            </field>
+        </record>     
+        
+        <record model="ir.actions.act_window"
+                id="action_window">
+            <field name="name">Tasks</field>
+            <field name="res_model">retofinal.activity</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_pupil_task"
+            name="Pupils Tasks"
+            action="action_window" />
+        
+    </data>
+    
+</odoo>
